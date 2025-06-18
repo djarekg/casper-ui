@@ -1,0 +1,63 @@
+{
+  "name": "@cui/demo",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=23.11.0"
+  },
+  "type": "module",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:cui": "node dist/@cui/demo/server/server.mjs",
+    "codegen": "graphql-codegen -c codegen.ts"
+  },
+  "dependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/compiler": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/forms": "^20.0.0",
+    "@angular/platform-browser": "^20.0.0",
+    "@angular/platform-server": "^20.0.0",
+    "@angular/router": "^20.0.0",
+    "@angular/ssr": "^20.0.0",
+    "@apollo/client": "^3.13.8",
+    "crypto-hash": "^3.1.0",
+    "express": "^5.1.0",
+    "graphql": "^16.11.0",
+    "isbot": "^5.1.27",
+    "tslib": "^2.3.0",
+    "rxjs": "~7.8.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.0.0",
+    "@angular/cli": "^20.0.0",
+    "@angular/compiler-cli": "^20.0.0",
+    "@apollo/client-devtools-vscode": "^4.19.13",
+    "@graphql-codegen/cli": "^5.0.5",
+    "@graphql-codegen/schema-ast": "^4.1.0",
+    "@graphql-codegen/typed-document-node": "^5.1.1",
+    "@graphql-codegen/typescript-operations": "^4.6.0",
+    "@graphql-codegen/typescript-resolvers": "^4.5.0",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@types/express": "^5.0.1",
+    "@types/graphql": "^14.5.0",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "latest",
+    "jasmine-core": "~5.7.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "karma-jasmine": "~5.1.0",
+    "karma": "~6.4.0",
+    "pnpm": "latest",
+    "prettier": "^3.5.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

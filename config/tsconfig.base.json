@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    // "outDir": "${configDir}/dist",
+    // "tsBuildInfoFile": "${configDir}/dist/.tsbuildinfo",
+    // "disableSourceOfProjectReferenceRedirect": true,
+
+    // angular specific
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+
+    // Enable latest features
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+
+    // Bundler mode
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": false,
+    "composite": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+
+    // Best practices
+    "strictNullChecks": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "alwaysStrict": true,
+    "allowImportingTsExtensions": true,
+
+    // Some stricter flags (disabled by default)
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": false,
+    "strictFunctionTypes": true
+  }
+}

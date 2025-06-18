@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+onlyBuiltDependencies:
+  - '@apollo/protobufjs'
+  - '@parcel/watcher'
+  - '@prisma/client'
+  - '@prisma/engines'
+  - esbuild
+  - lmdpnb
+  - msgpackr-extract
+  - prisma
+publicHoistPattern:
+  - esbuild
+  - typescript
+  - typegraphql-prisma
