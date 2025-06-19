@@ -18,13 +18,6 @@
       }
     },
     // {
-    //   "name": "ng test",
-    //   "type": "chrome",
-    //   "request": "launch",
-    //   "preLaunchTask": "npm: test",
-    //   "url": "http://localhost:9876/debug.html"
-    // },
-    // {
     //   "name": "Launch demo:serve",
     //   "cwd": "${workspaceFolder}/apps/demo",
     //   "request": "launch",
@@ -41,23 +34,40 @@
     //     "order": 1
     //   }
     // },
+    // {
+    //   "name": "Launch demo:client (edge)",
+    //   "type": "msedge",
+    //   "request": "launch",
+    //   "preLaunchTask": "npm: start",
+    //   "url": "http://localhost:3006/",
+    //   "webRoot": "${workspaceFolder}/apps/demo/src",
+    //   "userDataDir": "${workspaceFolder}/.out/edge/apps",
+    //   "internalConsoleOptions": "openOnSessionStart",
+    //   "sourceMaps": true,
+    //   "cwd": "${workspaceFolder}/apps/demo",
+    //   "smartStep": true,
+    //   "presentation": {
+    //     "hidden": false,
+    //     "group": "3",
+    //     "order": 2
+    //   }
+    // },
     {
-      "name": "Launch demo:client (edge)",
+      "name": "ng serve",
       "type": "msedge",
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://localhost:3006/",
-      "webRoot": "${workspaceFolder}/apps/demo/src",
       "userDataDir": "${workspaceFolder}/.out/edge/apps",
-      "internalConsoleOptions": "openOnSessionStart",
-      "sourceMaps": true,
       "cwd": "${workspaceFolder}/apps/demo",
-      "smartStep": true,
-      "presentation": {
-        "hidden": false,
-        "group": "3",
-        "order": 2
-      }
+      "webRoot": "${workspaceFolder}/apps/demo/src"
+    },
+    {
+      "name": "ng test",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: test",
+      "url": "http://localhost:9876/debug.html"
     },
     {
       "name": "Launch demo:client (chrome)",
