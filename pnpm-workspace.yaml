@@ -1,5 +1,7 @@
 packages:
   - apps/*
+ignoredBuiltDependencies:
+  - lmdb
 onlyBuiltDependencies:
   - '@apollo/protobufjs'
   - '@parcel/watcher'
