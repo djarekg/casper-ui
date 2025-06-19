@@ -3,14 +3,14 @@
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "engines": {
-    "node": ">=23.11.0"
+    "node": ">=22.16.0"
   },
   "type": "module",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 3006",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration development --port 3006",
     "test": "ng test",
     "codegen": "graphql-codegen -c codegen.ts"
   },

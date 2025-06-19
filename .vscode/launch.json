@@ -17,51 +17,50 @@
         "order": 1
       }
     },
-    // {
-    //   "name": "Launch demo:serve",
-    //   "cwd": "${workspaceFolder}/apps/demo",
-    //   "request": "launch",
-    //   "type": "node-terminal",
-    //   "noDebug": false,
-    //   "command": "pnpm run dev",
-    //   "skipFiles": ["**/<node_internals>/**", "**/node_modules/**", "!**/node_modules/@hui/**"],
-    //   "sourceMaps": true,
-    //   "smartStep": true,
-    //   "internalConsoleOptions": "openOnSessionStart",
-    //   "presentation": {
-    //     "hidden": false,
-    //     "group": "3",
-    //     "order": 1
-    //   }
-    // },
+    {
+      "name": "Launch demo:serve",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/demo",
+      "noDebug": false,
+      "command": "pnpm run start",
+      "skipFiles": ["**/<node_internals>/**", "**/node_modules/**", "!**/node_modules/@cui/**"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "presentation": {
+        "hidden": false,
+        "group": "3",
+        "order": 1
+      }
+    },
+    {
+      "name": "Launch demo:client (edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3006/",
+      "webRoot": "${workspaceFolder}/apps/demo/src",
+      "userDataDir": "${workspaceFolder}/.out/edge/apps",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "cwd": "${workspaceFolder}/apps/demo",
+      "smartStep": true,
+      "presentation": {
+        "hidden": false,
+        "group": "3",
+        "order": 2
+      }
+    },
     // {
     //   "name": "Launch demo:client (edge)",
     //   "type": "msedge",
     //   "request": "launch",
     //   "preLaunchTask": "npm: start",
     //   "url": "http://localhost:3006/",
-    //   "webRoot": "${workspaceFolder}/apps/demo/src",
     //   "userDataDir": "${workspaceFolder}/.out/edge/apps",
-    //   "internalConsoleOptions": "openOnSessionStart",
-    //   "sourceMaps": true,
     //   "cwd": "${workspaceFolder}/apps/demo",
-    //   "smartStep": true,
-    //   "presentation": {
-    //     "hidden": false,
-    //     "group": "3",
-    //     "order": 2
-    //   }
+    //   "webRoot": "${workspaceFolder}/apps/demo/src"
     // },
-    {
-      "name": "ng serve",
-      "type": "msedge",
-      "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:3006/",
-      "userDataDir": "${workspaceFolder}/.out/edge/apps",
-      "cwd": "${workspaceFolder}/apps/demo",
-      "webRoot": "${workspaceFolder}/apps/demo/src"
-    },
     {
       "name": "ng test",
       "type": "chrome",
@@ -90,7 +89,7 @@
   "compounds": [
     {
       "name": "Debug demo (edge)",
-      "configurations": ["Launch api", "Launch demo:client (edge)"],
+      "configurations": ["Launch api", "Launch demo:serve", "Launch demo:client (edge)"],
       "stopAll": true,
       "presentation": {
         "hidden": false,
