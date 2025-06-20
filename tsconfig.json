@@ -1,20 +1,72 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "composite": false
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+
+    // Enable latest features
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+
+    // Bundler mode
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": true,
+    "composite": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+
+    // Best practices
+    "strictNullChecks": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "alwaysStrict": true,
+    "allowImportingTsExtensions": true,
+
+    // Some stricter flags (disabled by default)
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": false,
+    "strictFunctionTypes": true
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   },
   "files": [],
   "references": [
     {
-      "path": "./apps/demo"
+      "path": "./apps/demo/tsconfig.app.json"
     },
     {
-      "path": "./apps/api"
+      "path": "./apps/api/tsconfig.json"
     },
-    // {
-    //   "path": "./packages/components"
-    // },
-    // {
-    //   "path": "./packages/core"
-    // }
+    {
+      "path": "./packages/core/tsconfig.lib.json"
+    },
+    {
+      "path": "./packages/core/tsconfig.spec.json"
+    }
   ]
 }
