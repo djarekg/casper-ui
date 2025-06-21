@@ -1,14 +1,108 @@
+// {
+//   "extends": "../../tsconfig.json",
+//   "compilerOptions": {
+//     // "baseUrl": "./",
+//     "paths": {
+//       "@/common/*": ["./src/app/common/*"],
+//       "@/components/*": ["./src/app/components/*"],
+//       "@/features/*": ["./src/app/features/*"],
+//       "@/services/*": ["./src/app/common/services/*"],
+//       "@/shared/*": ["./src/app/shared/*"],
+//       "@/ui/*": ["./src/app/ui/*"],
+//       "@cui/core/*": ["../../packages/core/src/*"],
+//       "@cui/graphql/*": ["../../packages/graphql/src/*"]
+//     }
+//   }
+// }
 {
-  "extends": "../../tsconfig.json",
+  "compileOnSave": false,
   "compilerOptions": {
+    // "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+
+    // Enable latest features
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+
+    // Bundler mode
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": true,
+    "composite": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+
+    // Best practices
+    "strictNullChecks": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "alwaysStrict": true,
+    "allowImportingTsExtensions": true,
+
+    // Some stricter flags (disabled by default)
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": false,
+    "strictFunctionTypes": true,
+
     "paths": {
-      "@/common/*": ["./app/common/*"],
-      "@/components/*": ["./app/components/*"],
-      "@/features/*": ["./app/features/*"],
-      "@/services/*": ["./app/common/services/*"],
-      "@/shared/*": ["./app/shared/*"],
-      "@/ui/*": ["./app/ui/*"],
-      "@cui/core/*": ["../../packages/core/src/*"]
+      "@/common/*": ["./src/app/common/*"],
+      "@/components/*": ["./src/app/components/*"],
+      "@/features/*": ["./src/app/features/*"],
+      "@/services/*": ["./src/app/common/services/*"],
+      "@/shared/*": ["./src/app/shared/*"],
+      "@/ui/*": ["./src/app/ui/*"],
+      "@cui/core/*": ["../../packages/core/src/*"],
+      "@cui/graphql/*": ["../../packages/graphql/src/*"]
     }
-  }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/demo/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/demo/tsconfig.spec.json"
+    },
+    {
+      "path": "./apps/api/tsconfig.json"
+    },
+    {
+      "path": "./packages/core/tsconfig.lib.json"
+    },
+    {
+      "path": "./packages/core/tsconfig.spec.json"
+    },
+    {
+      "path": "./packages/graphql/tsconfig.lib.json"
+    },
+    {
+      "path": "./packages/graphql/tsconfig.spec.json"
+    }
+  ]
 }

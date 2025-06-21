@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
+    // "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -60,6 +60,9 @@
       "path": "./apps/demo/tsconfig.app.json"
     },
     {
+      "path": "./apps/demo/tsconfig.spec.json"
+    },
+    {
       "path": "./apps/api/tsconfig.json"
     },
     {
@@ -67,6 +70,12 @@
     },
     {
       "path": "./packages/core/tsconfig.spec.json"
+    },
+    {
+      "path": "./packages/graphql/tsconfig.lib.json"
+    },
+    {
+      "path": "./packages/graphql/tsconfig.spec.json"
     }
   ]
 }

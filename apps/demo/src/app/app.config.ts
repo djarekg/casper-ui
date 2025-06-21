@@ -5,7 +5,7 @@ import {
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { MatNativeDateModule } from '@angular/material/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+// import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   PreloadAllModules,
   provideRouter,
@@ -34,7 +34,7 @@ export default {
       withPreloading(PreloadAllModules),
     ),
     provideHttpClient(withInterceptors([authInterceptor()])),
-    provideAnimations(),
+    // provideAnimations(),
     importProvidersFrom(MatNativeDateModule),
   ],
 } satisfies ApplicationConfig;
